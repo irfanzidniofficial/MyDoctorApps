@@ -1,14 +1,10 @@
-import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {ILLogo} from './assets';
+import {StyleSheet} from 'react-native';
+import {GetStarted} from './pages';
+import Splashcreen from './pages/Splashscreen';
 
 const App = () => {
-  return (
-    <View>
-      <ILLogo />
-      <Text>Welcome App JS</Text>
-    </View>
-  );
+  return <GetStarted />;
 };
 
 export default App;
