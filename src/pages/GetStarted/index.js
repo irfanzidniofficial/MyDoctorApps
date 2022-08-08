@@ -1,20 +1,23 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {ImageBackground, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {ILLogo} from '../../assets';
-import {Button} from '../../components';
+import {ILGetStarted, ILLogo} from '../../assets';
+import {Button, Gap} from '../../components';
 
 const GetStarted = () => {
   return (
-    <View style={styles.page}>
-      <ILLogo />
-      <Text style={styles.title}>
-        Konsultasi dengan dokter jadi lebih mudah & fleksibel
-      </Text>
+    <ImageBackground source={ILGetStarted} style={styles.page}>
+      <View>
+        <ILLogo />
+        <Text style={styles.title}>
+          Konsultasi dengan dokter jadi lebih mudah & fleksibel
+        </Text>
+      </View>
       <View>
         <Button title="Get Started" />
-        <Button title="Sign In" />
+        <Gap height={16} />
+        <Button type="secondary" title="Sign In" />
       </View>
-    </View>
+    </ImageBackground>
   );
 };
 
@@ -29,8 +32,9 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 28,
-    fontWeight: '600',
-    color: 'black',
+
+    color: 'white',
     marginTop: 91,
+    fontFamily: 'Nunito-SemiBold',
   },
 });
